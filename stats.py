@@ -14,3 +14,18 @@ def get_char_count(char_lower):
 		    dictionary[i] = 1
 
 	return dictionary
+
+
+def sort_on(item):
+    return item["num"]
+
+def sorted_list(char_count):
+    complete_list = []
+    for char, count in char_count.items():
+        char_dict = {"char": char, "num": count}
+        complete_list.append(char_dict)
+    complete_list.sort(reverse=True, key=sort_on)
+    return complete_list
+
+
+
